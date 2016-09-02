@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{28C18B90-1106-7EED-27E7-FD5365E863E2}") = "Escape Game VR", "Assembly-CSharp.csproj", "{84FAE9C2-A35E-2EA3-F1C0-7852E267E04A}"
+EndProject
+Project("{28C18B90-1106-7EED-27E7-FD5365E863E2}") = "Escape Game VR", "Assembly-CSharp-Editor.csproj", "{2DF728D3-2EB5-7358-7360-93D437535004}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84FAE9C2-A35E-2EA3-F1C0-7852E267E04A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84FAE9C2-A35E-2EA3-F1C0-7852E267E04A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84FAE9C2-A35E-2EA3-F1C0-7852E267E04A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84FAE9C2-A35E-2EA3-F1C0-7852E267E04A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DF728D3-2EB5-7358-7360-93D437535004}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF728D3-2EB5-7358-7360-93D437535004}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DF728D3-2EB5-7358-7360-93D437535004}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DF728D3-2EB5-7358-7360-93D437535004}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
