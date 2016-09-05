@@ -117,6 +117,7 @@
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\Breakable_Cube.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\ButtonReactor.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\ControlReactor.cs" />
+     <Compile Include="Assets\VRTK\Examples\Resources\Scripts\ControlReactor_Code.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\Controller_Hand.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\Controller_Menu.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\ExcludeTeleport.cs" />
@@ -197,6 +198,8 @@
      <Compile Include="Assets\VRTK\Scripts\VRTK_TouchpadWalking.cs" />
      <Compile Include="Assets\VRTK\Scripts\VRTK_UIPointer.cs" />
      <Compile Include="Assets\_Project\Scripts\CameraScript.cs" />
+     <Compile Include="Assets\_Project\Scripts\ControlReactorCustom.cs" />
+     <Compile Include="Assets\_Project\Scripts\CubeHide.cs" />
      <Compile Include="Assets\_Project\Scripts\GhostMode.cs" />
      <Compile Include="Assets\_Project\Scripts\GhostPortalScript.cs" />
      <Compile Include="Assets\_Project\Scripts\NormalMode.cs" />
