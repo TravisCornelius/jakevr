@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Project/Scenes/3_test.unity
+- path: C:/Users/User/Downloads/infiniteMonkeyVR-master/Assets/MountainTop3.unity
   isLoaded: 1
   isActive: 1
