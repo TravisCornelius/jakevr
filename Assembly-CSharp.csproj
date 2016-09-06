@@ -198,14 +198,17 @@
      <Compile Include="Assets\VRTK\Scripts\VRTK_Simulator.cs" />
      <Compile Include="Assets\VRTK\Scripts\VRTK_TouchpadWalking.cs" />
      <Compile Include="Assets\VRTK\Scripts\VRTK_UIPointer.cs" />
+     <Compile Include="Assets\_Project\Scripts\ButtonStopTimer.cs" />
      <Compile Include="Assets\_Project\Scripts\CameraScript.cs" />
      <Compile Include="Assets\_Project\Scripts\ControlReactorCustom.cs" />
+     <Compile Include="Assets\_Project\Scripts\CountdownClock.cs" />
      <Compile Include="Assets\_Project\Scripts\CubeHide.cs" />
      <Compile Include="Assets\_Project\Scripts\GhostMode.cs" />
      <Compile Include="Assets\_Project\Scripts\GhostPortalScript.cs" />
      <Compile Include="Assets\_Project\Scripts\NormalMode.cs" />
      <Compile Include="Assets\_Project\Scripts\NormalPortalScript.cs" />
      <Compile Include="Assets\_Project\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\_Project\Scripts\SledgeHammer.cs" />
      <None Include="Assets\VRTK\Version.txt" />
      <None Include="Assets\Dynamic Flickering Light\readme.txt" />
      <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
