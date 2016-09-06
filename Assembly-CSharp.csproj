@@ -69,6 +69,7 @@
      <Compile Include="Assets\SpellCraft Assets\Scripts\SC_Siny.cs" />
      <Compile Include="Assets\SpellCraft Assets\Scripts\SC_SpawnSpellLocationGround.cs" />
      <Compile Include="Assets\SpellCraft Assets\Scripts\SC_SpellDuration.cs" />
+     <Compile Include="Assets\SpinLock.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />

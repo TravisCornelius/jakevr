@@ -36,6 +36,33 @@ public class LockerClickInteractor : LockerInteractor {
 
     }
 
+
+    public override void StartUsing(GameObject usingObject)
+    {
+        base.StartUsing(usingObject);
+        
+
+    }
+
+    public override void StopUsing(GameObject usingObject)
+    {
+        base.StopUsing(usingObject);
+        
+    }
+
+
+
+    protected override void Start()
+    {
+        base.Start();
+        
+    }
+
+    protected override void Update()
+    {
+        //rotator.transform.Rotate(new Vector3(spinSpeed * Time.deltaTime, 0f, 0f));
+    }
+
     void SetAnimatorTrigger(string name, bool value) {
 
         if (!string.IsNullOrEmpty(name) && animator != null && animator.isActiveAndEnabled) {

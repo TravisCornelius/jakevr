@@ -1,7 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
+using VRTK;
 
-public class LockerInteractor : MonoBehaviour {
+public class LockerInteractor : VRTK_InteractableObject
+{
+    public override void StartUsing(GameObject usingObject)
+    {
+        char symbol = '1';
+        base.StartUsing(usingObject);
+        OnPrimaryAction();
+        _targetLocker.SwitchOpened();
+        _targetLocker.SetSymbol(primaryAction.symbol, primaryAction.symbolIndex);
+
+        Debug.Log("startUsing");
+        Debug.Log(_targetLocker);
+        Debug.Log(_targetLocker._controlSequence);
+        Debug.Log(_targetLocker._currentSequence);
+    }
+
+    public override void StopUsing(GameObject usingObject)
+    {
+        base.StopUsing(usingObject);
+        
+    }
+
+
+
+    
+
 
     public enum ActionID {
 
@@ -54,7 +80,7 @@ public class LockerInteractor : MonoBehaviour {
     }
 
     protected void Use(ActionParams action, bool playSound = true) {
-
+        Debug.Log(action);
         if (_targetLocker == null || action.id == ActionID.None) return;
 
         switch (action.id) {
@@ -188,7 +214,11 @@ public class LockerInteractor : MonoBehaviour {
     }
 
     IEnumerator Start() {
-
+        base.Start();
+        _targetLocker.SetSymbol('1', 0);
+        _targetLocker.SetSymbol('1', 1);
+        _targetLocker.SetSymbol('1', 2);
+        _targetLocker.SetSymbol('1', 3);
         yield return null;
 
         if (prewarmAction) {
@@ -197,6 +227,13 @@ public class LockerInteractor : MonoBehaviour {
 
         }
 
+    }
+
+  
+
+    protected override void Update()
+    {
+        //rotator.transform.Rotate(new Vector3(spinSpeed * Time.deltaTime, 0f, 0f));
     }
 
 }

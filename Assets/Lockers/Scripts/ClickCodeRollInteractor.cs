@@ -15,6 +15,7 @@ public sealed class ClickCodeRollInteractor : LockerClickInteractor {
     char[] values;
     float rotationStep;
     Quaternion targetRot;
+    GameObject obj;
 
     void UpdateTargetSymbol() {
 
@@ -36,6 +37,23 @@ public sealed class ClickCodeRollInteractor : LockerClickInteractor {
 
         primaryAction.symbol = values[i];
         secondaryAction.symbol = values[i];
+        Debug.Log("Symbol from updatetargetsymbol: " + values[i]);
+        Debug.Log("name: " + this.name);
+        
+        if (this.name == "lock_01_a")
+        {
+            primaryAction.symbolIndex = 0;
+        } else if (this.name == "lock_01_b")
+        {
+            primaryAction.symbolIndex = 1;
+        } else if (this.name == "lock_01_c")
+        {
+            primaryAction.symbolIndex = 2;
+        } else if (this.name == "lock_01_d")
+        {
+            primaryAction.symbolIndex = 3;
+        }
+        
 
     }
 
@@ -67,19 +85,23 @@ public sealed class ClickCodeRollInteractor : LockerClickInteractor {
 
         string[] splString = valuesString.Replace(" ", string.Empty).Split(',');
         values = new char[splString.Length];
+        
 
         for (int i = 0; i < values.Length; i++) {
 
             values[i] = splString[i][0];
 
         }
-
+        isUsable = true;
+        highlightOnTouch = true;
+        touchHighlightColor = Color.cyan;
         rotationStep = values.Length > 0 ? 360f / values.Length : 0f;
         targetRot = transform.localRotation;
         rotationAxis.Normalize();
 
         UpdateTargetSymbol();
-
+        obj = GetComponent<GameObject>();
+       
     }
 
     void Update() {

@@ -24,7 +24,7 @@ public class Locker : MonoBehaviour {
     public string controlSequence {
 
         get {
-
+            Debug.Log(controlSequence);
             return _controlSequence;
 
         }
@@ -34,7 +34,7 @@ public class Locker : MonoBehaviour {
     public string currentSequence {
 
         get {
-
+            Debug.Log(_currentSequence);
             return _currentSequence;
 
         }
@@ -45,11 +45,10 @@ public class Locker : MonoBehaviour {
                 _onCurrentSequenceChanged.Invoke(_currentSequence, value);
                 _currentSequence = value;
 
-                if (tryToUnlockOnSeqChanged) {
+               
 
                     TryToUnlock();
 
-                }
 
                 if (IsCurrentSequenceFilled()) {
 
@@ -128,7 +127,7 @@ public class Locker : MonoBehaviour {
     }
 
     [SerializeField]
-    string _controlSequence = "12345";
+    public string _controlSequence = "12345";
 
     [Space(4f)]
     [SerializeField]
@@ -201,7 +200,7 @@ public class Locker : MonoBehaviour {
     BooleanChangedEvent _onOpenStateChanged;
 
     int sequenceLength;
-    string _currentSequence;
+    public string _currentSequence;
     bool _isLocked;
     bool isInitialized;
 
@@ -279,7 +278,7 @@ public class Locker : MonoBehaviour {
     }
 
     protected bool IsCurrentSequenceFilled() {
-
+        Debug.Log("IsCurrentSequenceFilled");
         foreach (char c in _currentSequence) {
 
             if (char.IsWhiteSpace(c)) {
@@ -295,13 +294,13 @@ public class Locker : MonoBehaviour {
     }
 
     protected void TryToUnlock() {
-
+        Debug.Log("TryToUnlock");
         if (!_isOpened) {
 
             if (_currentSequence == _controlSequence) {
 
                 isLocked = false;
-
+                SwitchOpened();
             }
 
         }
@@ -359,22 +358,15 @@ public class Locker : MonoBehaviour {
     }
 
     public void SwitchOpened() {
-
-        if (_isOpened) {
-
-            Close();
-
-        }
-        else {
-
+        
             Open();
-
-        }
+        
 
     }
 
     public void SetSymbol(char symbol, int position) {
-
+        Debug.Log("char: " + symbol);
+        Debug.Log("char: " + position);
         if (position >= 0 && position < sequenceLength) {
 
             char[] curSymbols = _currentSequence.ToCharArray();
@@ -464,7 +456,7 @@ public class Locker : MonoBehaviour {
     }
 
     protected virtual void Awake() {
-
+        Debug.Log("AWAKE");
         if (useAnimator) {
 
             if (animator == null) {
@@ -496,9 +488,14 @@ public class Locker : MonoBehaviour {
 
         }
 
+
         sequenceLength = _controlSequence.Length;
         SetControlSequence(_controlSequence, true);
         SetOpened(_isOpened);
+        SetSymbol('1', 0);
+        SetSymbol('1', 1);
+        SetSymbol('1', 2);
+        SetSymbol('1', 3);
 
         isInitialized = true;
 
