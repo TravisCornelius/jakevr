@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{84FAE9C2-A35E-2EA3-F1C0-7852E267E04A}</ProjectGuid>
+    <ProjectGuid>{53C3A200-8835-3316-3B52-84B56B650CCC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,6 +53,7 @@
      <Compile Include="Assets\Lockers\Scripts\LockerInteractor.cs" />
      <Compile Include="Assets\Lockers\Scripts\Misc\CameraFocusSwitcher.cs" />
      <Compile Include="Assets\Lockers\Scripts\Misc\LockersTestUI.cs" />
+     <Compile Include="Assets\Owl.cs" />
      <Compile Include="Assets\Particle Ribbon\Scripts\ReverseNormals.cs" />
      <Compile Include="Assets\SpellCraft Assets\Demo\Scripts\SC_ClickButton.cs" />
      <Compile Include="Assets\SpellCraft Assets\Demo\Scripts\SC_EffectsModeDemo.cs" />
@@ -69,7 +70,6 @@
      <Compile Include="Assets\SpellCraft Assets\Scripts\SC_Siny.cs" />
      <Compile Include="Assets\SpellCraft Assets\Scripts\SC_SpawnSpellLocationGround.cs" />
      <Compile Include="Assets\SpellCraft Assets\Scripts\SC_SpellDuration.cs" />
-     <Compile Include="Assets\SpinLock.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
@@ -118,7 +118,6 @@
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\Breakable_Cube.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\ButtonReactor.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\ControlReactor.cs" />
-     <Compile Include="Assets\VRTK\Examples\Resources\Scripts\ControlReactor_Code.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\Controller_Hand.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\Controller_Menu.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\ExcludeTeleport.cs" />
@@ -199,8 +198,6 @@
      <Compile Include="Assets\VRTK\Scripts\VRTK_TouchpadWalking.cs" />
      <Compile Include="Assets\VRTK\Scripts\VRTK_UIPointer.cs" />
      <Compile Include="Assets\_Project\Scripts\CameraScript.cs" />
-     <Compile Include="Assets\_Project\Scripts\ControlReactorCustom.cs" />
-     <Compile Include="Assets\_Project\Scripts\CubeHide.cs" />
      <Compile Include="Assets\_Project\Scripts\GhostMode.cs" />
      <Compile Include="Assets\_Project\Scripts\GhostPortalScript.cs" />
      <Compile Include="Assets\_Project\Scripts\NormalMode.cs" />
