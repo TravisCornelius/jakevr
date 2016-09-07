@@ -53,7 +53,6 @@
      <Compile Include="Assets\Lockers\Scripts\LockerInteractor.cs" />
      <Compile Include="Assets\Lockers\Scripts\Misc\CameraFocusSwitcher.cs" />
      <Compile Include="Assets\Lockers\Scripts\Misc\LockersTestUI.cs" />
-     <Compile Include="Assets\Owl.cs" />
      <Compile Include="Assets\Particle Ribbon\Scripts\ReverseNormals.cs" />
      <Compile Include="Assets\SpellCraft Assets\Demo\Scripts\SC_ClickButton.cs" />
      <Compile Include="Assets\SpellCraft Assets\Demo\Scripts\SC_EffectsModeDemo.cs" />
@@ -70,7 +69,6 @@
      <Compile Include="Assets\SpellCraft Assets\Scripts\SC_Siny.cs" />
      <Compile Include="Assets\SpellCraft Assets\Scripts\SC_SpawnSpellLocationGround.cs" />
      <Compile Include="Assets\SpellCraft Assets\Scripts\SC_SpellDuration.cs" />
-     <Compile Include="Assets\SpinLock.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
@@ -106,7 +104,6 @@
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_TrackedObject.cs" />
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
-     <Compile Include="Assets\Table_Script.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\Add_HeadsetCollisionFade.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\Archery\Arrow.cs" />
      <Compile Include="Assets\VRTK\Examples\Resources\Scripts\Archery\ArrowNotch.cs" />
@@ -208,8 +205,11 @@
      <Compile Include="Assets\_Project\Scripts\GhostPortalScript.cs" />
      <Compile Include="Assets\_Project\Scripts\NormalMode.cs" />
      <Compile Include="Assets\_Project\Scripts\NormalPortalScript.cs" />
+     <Compile Include="Assets\_Project\Scripts\Owl.cs" />
      <Compile Include="Assets\_Project\Scripts\PlayerScript.cs" />
      <Compile Include="Assets\_Project\Scripts\SledgeHammer.cs" />
+     <Compile Include="Assets\_Project\Scripts\SpinLock.cs" />
+     <Compile Include="Assets\_Project\Scripts\Table_Script.cs" />
      <None Include="Assets\VRTK\Version.txt" />
      <None Include="Assets\Dynamic Flickering Light\readme.txt" />
      <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
