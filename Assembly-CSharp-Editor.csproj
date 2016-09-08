@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A7D5A10E-F240-9390-43E9-2B77B731A76F}</ProjectGuid>
+    <ProjectGuid>{2DF728D3-2EB5-7358-7360-93D437535004}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -61,6 +61,7 @@
      <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
      <None Include="Assets\Ghost Shaders\Version 1.2\Old Ghost Animated.shader" />
      <None Include="Assets\Ghost Shaders\Version 1.2\Old Ghost Simple.shader" />
+     <None Include="Assets\DungeonLevers\Readme.txt" />
      <None Include="Assets\VRTK\Scripts\Shaders\UIOverlay.shader" />
      <None Include="Assets\Ghost Shaders\Ghost See Through(Only).shader" />
      <None Include="Assets\Ghost Shaders\Ghost Animated Details.shader" />
@@ -68,11 +69,15 @@
      <None Include="Assets\readme.txt" />
      <None Include="Assets\SteamVR\Resources\SteamVR_SphericalProjection.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_AlphaOut.shader" />
+     <None Include="Assets\PBS Materials Variety Pack\readme.txt" />
      <None Include="Assets\Ghost Shaders\Ghost Fast.shader" />
      <None Include="Assets\Particle Ribbon\readme_Simple_Particle_Ribbon.txt" />
      <None Include="Assets\SteamVR\readme.txt" />
      <None Include="Assets\VRTK\Scripts\Shaders\Unlit_TransparentColor.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_ColorOut.shader" />
+ <Reference Include="Assembly-UnityScript">
+ <HintPath>C:/Users/User/Desktop/VR DEVELOPMENT/Escape Game VR/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -106,7 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{53C3A200-8835-3316-3B52-84B56B650CCC}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{84FAE9C2-A35E-2EA3-F1C0-7852E267E04A}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
