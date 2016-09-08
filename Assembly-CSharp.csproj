@@ -210,6 +210,7 @@
      <Compile Include="Assets\_Project\Scripts\SledgeHammer.cs" />
      <Compile Include="Assets\_Project\Scripts\SpinLock.cs" />
      <Compile Include="Assets\_Project\Scripts\Table_Script.cs" />
+     <Compile Include="Assets\grimAnimator.cs" />
      <None Include="Assets\VRTK\Version.txt" />
      <None Include="Assets\Dynamic Flickering Light\readme.txt" />
      <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
