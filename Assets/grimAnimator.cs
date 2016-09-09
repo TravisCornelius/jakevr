@@ -35,7 +35,7 @@ public class grimAnimator : MonoBehaviour {
         Debug.Log((close - transform.position).magnitude);
         if ((close - transform.position).magnitude < .5f  && animationTrigger)
         {
-            anim.CrossFade("Scream", 0f);
+            anim.CrossFade("Scream", .5f);
             nextToDoor = true;
             animationTrigger = false;
         }
