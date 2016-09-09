@@ -37,7 +37,7 @@ public class playCollisionSound : MonoBehaviour {
             lastSource.Play();
         } else if (force > 10)
         {
-            lastSource.clip = lightForceClip;
+            lastSource.clip = heavyForceClip;
             lastSource.Play();
         }
 
