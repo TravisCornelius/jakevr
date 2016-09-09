@@ -3,7 +3,7 @@ using VRTK;
 
 public class ControlReactor : MonoBehaviour
 {
-    public TextMesh go;
+   public static bool lightsOn = false;
 
     private void Start()
     {
@@ -13,6 +13,13 @@ public class ControlReactor : MonoBehaviour
 
     private void HandleChange(float value, float normalizedValue)
     {
-        go.text = value.ToString() + "(" + normalizedValue.ToString() + "%)";
+        if (normalizedValue > 70)
+        {
+            lightsOn = true;
+        } else
+        {
+            lightsOn = false;
+        }
+        
     }
 }

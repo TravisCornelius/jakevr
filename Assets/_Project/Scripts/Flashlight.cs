@@ -36,7 +36,7 @@ public class Flashlight : VRTK_InteractableObject {
         lights = GetComponentsInChildren<Light>();
         foreach (Light light in lights)
         {
-            light.enabled = false;
+            light.enabled = true;
         }
         
         
