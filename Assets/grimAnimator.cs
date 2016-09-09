@@ -6,18 +6,22 @@ using System.Collections;
 public class grimAnimator : MonoBehaviour {
 
     public Locker locker;
-    AudioSource source;    
-     
+    AudioSource source;
+    private bool nextToDoor = false;
+    Animator anim;
+    Vector3 close;
+    private bool animationTrigger = true;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         source = GetComponent<AudioSource>();
-
-	}
+        anim = GetComponent<Animator>();
+        close = new Vector3(-0.15f, 0, .24f);
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if (locker.isOpened)
+        if (locker.isOpened && !nextToDoor)
         {
             source.loop = true;
             if (!source.isPlaying)
@@ -26,17 +30,17 @@ public class grimAnimator : MonoBehaviour {
             }
             
             transform.Translate(Vector3.back * Time.deltaTime * 4.5f);
+            
         }
-        
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "DoorCollider") // If A collides with B
+        Debug.Log((close - transform.position).magnitude);
+        if ((close - transform.position).magnitude < .5f  && animationTrigger)
         {
-            Destroy(gameObject);
-            Debug.Log("collided!");
-
+            anim.CrossFade("Scream", 0f);
+            nextToDoor = true;
+            animationTrigger = false;
         }
+
     }
+
+ 
 }
