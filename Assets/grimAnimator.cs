@@ -29,4 +29,14 @@ public class grimAnimator : MonoBehaviour {
         }
         
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "DoorCollider") // If A collides with B
+        {
+            Destroy(gameObject);
+            Debug.Log("collided!");
+
+        }
+    }
 }
