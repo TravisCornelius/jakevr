@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class SceneController : MonoBehaviour {
-    Light[] lights;       
+    Light[] lights;
+    public static bool lightsOn = false;
+    private bool lightsOnTrigger = true;
 	// Use this for initialization
 	void Start () {
         lights = GetComponentsInChildren<Light>();
@@ -14,6 +16,20 @@ public class SceneController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        if (lightsOnTrigger && lightsOn)
+        {
+            foreach (Light l in lights)
+            {
+                l.enabled = true;
+                lightsOnTrigger = false;
+            }
+        } else if (!lightsOnTrigger && !lightsOn)
+        {
+            foreach (Light l in lights)
+            {
+                l.enabled = false;
+                lightsOnTrigger = true;
+            }
+        }
 	}
 }
