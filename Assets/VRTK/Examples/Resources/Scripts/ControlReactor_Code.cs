@@ -7,6 +7,7 @@ public class ControlReactor_Code : MonoBehaviour
     public GameObject slider1;
     public GameObject slider2;
     public GameObject slider3;
+    public static bool sliderSuccess = false;
 
     private void Start()
     {
@@ -23,11 +24,13 @@ public class ControlReactor_Code : MonoBehaviour
     private void SliderChange(float value1, float value2, float value3)
     {
 
-        if (value1 == 9 && value2 == 3 && value3 == 5)
+        if (value1 == 2 && value2 == 9 && value3 == 7)
         {
-            go.text = "4852";
-            
-        }else
+            sliderSuccess = true;
+
+
+        }
+        else
         {
             go.text = "";
         }

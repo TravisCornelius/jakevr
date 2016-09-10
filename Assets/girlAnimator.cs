@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(AudioSource))]
-
-public class grimAnimator : MonoBehaviour {
+public class girlAnimator : MonoBehaviour {
 
     public Locker locker;
     AudioSource source;
@@ -17,13 +15,13 @@ public class grimAnimator : MonoBehaviour {
     {
         source = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
-        close = new Vector3(-0.15f, 0, .24f);
+        close = new Vector3(2.3f, 0, -10f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (locker.isOpened && !nextToDoor)
+        if ( ControlReactor_Code.sliderSuccess && !nextToDoor)
         {
             source.loop = true;
             if (!source.isPlaying)
@@ -37,12 +35,10 @@ public class grimAnimator : MonoBehaviour {
 
         if ((close - transform.position).magnitude < .5f && animationTrigger)
         {
-            anim.CrossFade("Scream", .5f);
+          //  anim.CrossFade("Scream", .5f);
             nextToDoor = true;
             animationTrigger = false;
         }
 
     }
-
-
 }
