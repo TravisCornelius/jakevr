@@ -5,6 +5,7 @@ public class lightGame : MonoBehaviour {
 
     Light l;
     ParticleSystem system;
+    private bool lightTrigger = true;
 	// Use this for initialization
 	void Start () {
         l = GetComponent<Light>();
@@ -15,10 +16,16 @@ public class lightGame : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if (SceneController.lightsOn)
+	    if (SceneController.lightsOn && lightTrigger)
         {
+            lightTrigger = false;
             l.enabled = true;
             system.Play();
+        } else if (!SceneController.lightsOn && !lightTrigger)
+        {
+            lightTrigger = true;
+            l.enabled = false;
+            system.Stop();
         }
 	}
 }
