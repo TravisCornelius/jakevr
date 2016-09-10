@@ -32,7 +32,7 @@ public class grimAnimator : MonoBehaviour {
             transform.Translate(Vector3.back * Time.deltaTime * 4.5f);
             
         }
-        Debug.Log((close - transform.position).magnitude);
+      
         if ((close - transform.position).magnitude < .5f  && animationTrigger)
         {
             anim.CrossFade("Scream", .5f);

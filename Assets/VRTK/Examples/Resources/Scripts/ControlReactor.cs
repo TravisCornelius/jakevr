@@ -3,7 +3,7 @@ using VRTK;
 
 public class ControlReactor : MonoBehaviour
 {
-   
+    public static bool lightsOn = false;
 
     private void Start()
     {
@@ -15,10 +15,10 @@ public class ControlReactor : MonoBehaviour
     {
         if (normalizedValue > 70)
         {
-            SceneController.lightsOn = true;
+            lightsOn = true;
         } else
         {
-            SceneController.lightsOn = false;
+            lightsOn = false;
         }
         
     }

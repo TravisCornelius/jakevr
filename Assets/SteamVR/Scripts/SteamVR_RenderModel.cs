@@ -266,6 +266,7 @@ public class SteamVR_RenderModel : MonoBehaviour
 
 	private bool SetModel(string renderModelName)
 	{
+        
 		StripMesh(gameObject);
 
 		using (var holder = new RenderModelInterfaceHolder())
@@ -283,6 +284,7 @@ public class SteamVR_RenderModel : MonoBehaviour
 
 			if (!string.IsNullOrEmpty(renderModelName))
 			{
+                
 				var model = models[renderModelName] as RenderModel;
 				if (model == null || model.mesh == null)
 				{
@@ -299,13 +301,14 @@ public class SteamVR_RenderModel : MonoBehaviour
 
 					models[renderModelName] = model;
 				}
-
-				gameObject.AddComponent<MeshFilter>().mesh = model.mesh;
-				gameObject.AddComponent<MeshRenderer>().sharedMaterial = model.material;
-				return true;
+                
+                gameObject.AddComponent<MeshFilter>().mesh = model.mesh;
+                gameObject.AddComponent<MeshRenderer>().sharedMaterial = model.material;
+                return true;
 			}
 		}
-
+      
+        
 		return false;
 	}
 
@@ -493,6 +496,7 @@ public class SteamVR_RenderModel : MonoBehaviour
 			child.gameObject.SetActive(false);
 			StripMesh(child.gameObject);
 		}
+        
 
 		// If no model specified, we're done; return success.
 		if (string.IsNullOrEmpty(renderModelName))
@@ -564,8 +568,8 @@ public class SteamVR_RenderModel : MonoBehaviour
 				models[componentRenderModelName] = model;
 			}
 
-			t.gameObject.AddComponent<MeshFilter>().mesh = model.mesh;
-			t.gameObject.AddComponent<MeshRenderer>().sharedMaterial = model.material;
+			//t.gameObject.AddComponent<MeshFilter>().mesh = model.mesh;
+			//t.gameObject.AddComponent<MeshRenderer>().sharedMaterial = model.material;
 		}
 
 		return true;
