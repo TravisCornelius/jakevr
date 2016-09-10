@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class watch : MonoBehaviour {
 
     TextMesh mesh;          
@@ -12,6 +13,8 @@ public class watch : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        mesh.text = "" + SceneController.timer;
+        float min = Mathf.Floor(SceneController.timer / 60);
+        float seconds = Mathf.Floor(SceneController.timer - min * 60);
+        mesh.text = "0" + min + ":" + seconds;
 	}
 }
