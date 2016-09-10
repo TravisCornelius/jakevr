@@ -24,7 +24,7 @@ public class Locker : MonoBehaviour {
     public string controlSequence {
 
         get {
-            Debug.Log(controlSequence);
+            
             return _controlSequence;
 
         }
@@ -34,7 +34,7 @@ public class Locker : MonoBehaviour {
     public string currentSequence {
 
         get {
-            Debug.Log(_currentSequence);
+            
             return _currentSequence;
 
         }
@@ -278,7 +278,7 @@ public class Locker : MonoBehaviour {
     }
 
     protected bool IsCurrentSequenceFilled() {
-        Debug.Log("IsCurrentSequenceFilled");
+       
         foreach (char c in _currentSequence) {
 
             if (char.IsWhiteSpace(c)) {
@@ -294,7 +294,7 @@ public class Locker : MonoBehaviour {
     }
 
     protected void TryToUnlock() {
-        Debug.Log("TryToUnlock");
+        
         if (!_isOpened) {
 
             if (_currentSequence == _controlSequence) {
@@ -365,8 +365,7 @@ public class Locker : MonoBehaviour {
     }
 
     public void SetSymbol(char symbol, int position) {
-        Debug.Log("char: " + symbol);
-        Debug.Log("char: " + position);
+     
         if (position >= 0 && position < sequenceLength) {
 
             char[] curSymbols = _currentSequence.ToCharArray();
@@ -456,7 +455,7 @@ public class Locker : MonoBehaviour {
     }
 
     protected virtual void Awake() {
-        Debug.Log("AWAKE");
+      
         if (useAnimator) {
 
             if (animator == null) {
