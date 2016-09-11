@@ -24,7 +24,7 @@ public class ControlReactor_Code : MonoBehaviour
     private void SliderChange(float value1, float value2, float value3)
     {
 
-        if (value1 == 2 && value2 == 9 && value3 == 7)
+        if (value1 == 7 && value2 == 2 && value3 == 9)
         {
             sliderSuccess = true;
 
