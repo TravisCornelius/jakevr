@@ -3,7 +3,6 @@ using System.Collections;
 
 public class girlAnimator : MonoBehaviour {
 
-    public Locker locker;
     AudioSource source;
     private bool nextToDoor = false;
     Animator anim;
@@ -15,7 +14,7 @@ public class girlAnimator : MonoBehaviour {
     {
         source = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
-        close = new Vector3(2.3f, 0, -10f);
+        close = new Vector3(2.47f, 0, -0f);
     }
 
     // Update is called once per frame
@@ -29,7 +28,7 @@ public class girlAnimator : MonoBehaviour {
                 source.Play();
             }
 
-            transform.Translate(Vector3.back * Time.deltaTime * 4.5f);
+            transform.Translate(Vector3.back * Time.deltaTime * 3f);
 
         }
 
