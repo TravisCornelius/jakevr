@@ -18,7 +18,7 @@ public class Owl : MonoBehaviour {
     void Update () {
         if (move)
         {
-            transform.Translate(Vector3.up *5* Time.deltaTime, Space.World);
+            //transform.Translate(Vector3.up *5* Time.deltaTime, Space.World);
         }
         
     }
