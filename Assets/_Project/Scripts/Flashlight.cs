@@ -23,10 +23,10 @@ public class Flashlight : VRTK_InteractableObject {
         lastSource.clip = turnOnOff;
         lastSource.Play();
 
-        foreach (Light light in lights)
+        /*foreach (Light light in lights)
         {
             light.enabled = true;
-        }
+        }*/
     }
 
     public override void StopUsing(GameObject usingObject)
@@ -36,10 +36,10 @@ public class Flashlight : VRTK_InteractableObject {
         lastSource.clip = turnOnOff;
         lastSource.Play();
 
-        foreach (Light light in lights)
+        /*foreach (Light light in lights)
         {
             light.enabled = false;
-        }
+        }*/
     }
 
     protected override void Start()
