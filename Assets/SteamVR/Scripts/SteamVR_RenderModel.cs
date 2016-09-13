@@ -568,8 +568,9 @@ public class SteamVR_RenderModel : MonoBehaviour
 				models[componentRenderModelName] = model;
 			}
 
-			//t.gameObject.AddComponent<MeshFilter>().mesh = model.mesh;
-			//t.gameObject.AddComponent<MeshRenderer>().sharedMaterial = model.material;
+            //TRAVISCODE
+			t.gameObject.AddComponent<MeshFilter>().mesh = model.mesh;
+			t.gameObject.AddComponent<MeshRenderer>().sharedMaterial = model.material;
 		}
 
 		return true;
