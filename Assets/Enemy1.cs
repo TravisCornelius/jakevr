@@ -43,6 +43,13 @@ public class Enemy1 : MonoBehaviour
         body = GetComponent<Rigidbody>();
         animator.CrossFade(clips.flyNormal.ToString(), .5f);
     }
+    IEnumerator DestroyEnemy()
+    {
+
+        yield return new WaitForSeconds(.5f);
+        Destroy(gameObject);
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -55,6 +62,7 @@ public class Enemy1 : MonoBehaviour
         if (transform.position.y < .2f)
         {
             animator.CrossFade(clips.deathFloor.ToString(), .5f);
+            DestroyEnemy();
         }
 
     }
