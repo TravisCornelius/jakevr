@@ -4,7 +4,7 @@ using VRTK;
 public class Gun : VRTK_InteractableObject
 {
     private GameObject bullet;
-    private float bulletSpeed = 3000f;
+    private float bulletSpeed = 30f;
     private float bulletLife = 5f;
 
     public override void StartUsing(GameObject usingObject)
@@ -24,6 +24,7 @@ public class Gun : VRTK_InteractableObject
     {
         GameObject bulletClone = Instantiate(bullet, bullet.transform.position, bullet.transform.rotation) as GameObject;
         bulletClone.SetActive(true);
+        bulletClone.gameObject.tag = "Bullet";
         Rigidbody rb = bulletClone.GetComponent<Rigidbody>();
         rb.AddForce(-bullet.transform.forward * bulletSpeed);
         Destroy(bulletClone, bulletLife);
