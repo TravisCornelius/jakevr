@@ -33,19 +33,20 @@ public class Owl : MonoBehaviour {
     bool[] animationTriggers = new bool[] { true,true,true,true,true,true};
     bool flyAround = false;
     bool flyClose = false;
-	  
+    AudioSource source;
+    public AudioClip liftOffAudioClip;
 
     IEnumerator AnimationDelay()
     {
 
-        yield return new WaitForSeconds(18);
+        yield return new WaitForSeconds(15);
         flyAround = true;
 
     }
     IEnumerator AnimationDelay2()
     {
         
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(17);
         flyClose = true;
 
     }
@@ -53,16 +54,17 @@ public class Owl : MonoBehaviour {
     void Start()
     {
         animator = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update () {
         if (animationTriggers[0])
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(-0.11f, 0, 1.41f), 3f* Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(1.93f, 1.725f, 1.663f), 15f * Time.deltaTime);
         }
         
-        if (animationTriggers[0] && transform.position.y < .5f)
+        if (animationTriggers[0] && Vector3.Distance(transform.position, new Vector3(1.93f, 1.725f, 1.663f)) < .01f)
         {
             animator.CrossFade(clips.landingFloor.ToString(), .5f);
             animationTriggers[0] = false;
@@ -104,11 +106,18 @@ public class Owl : MonoBehaviour {
            }
            if (OwlLegs.isLegGrabbed)
             {
+                if (animationTriggers[3])
+                {
+                    animationTriggers[3] = false;
+                    source.Stop();
+                    source.clip = liftOffAudioClip;
+                    source.Play();
+                }
                 //transform.Rotate(Vector3.up * 1 / 20 * Time.deltaTime);
                 //transform.RotateAround(new Vector3(0,0,0), Vector3.up, 20 * Time.deltaTime);
-                if (transform.position.y - 0 < 200)
+                if (transform.position.y - 0 < 50)
                 {
-                    transform.Translate(Vector3.up * 10 * Time.deltaTime);
+                    transform.Translate(Vector3.up * 7* Time.deltaTime);
                 }
                 if (Vector3.Distance(new Vector3(0,0,0), transform.position) <100)
                 {
