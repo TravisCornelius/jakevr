@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c5770d33839db494587fc6ef99b95705
+timeCreated: 1473876930
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - DK Face Your Fears II
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3a492df1bc1c36b439a9b1632c2f4440, type: 3}
+  - {fileID: 12800000, guid: 9d7b781b6e6a8734fb9e84ef21c6f1f6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
