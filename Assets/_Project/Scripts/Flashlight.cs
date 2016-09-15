@@ -15,6 +15,9 @@ public class Flashlight : VRTK_InteractableObject {
     public AudioClip mediumForceClip;
     public AudioClip lightForceClip;
 
+    public GameObject rightHand;
+    private Transform t;
+
     public override void StartUsing(GameObject usingObject)
     {
         base.StartUsing(usingObject);
@@ -52,8 +55,11 @@ public class Flashlight : VRTK_InteractableObject {
         {
             light.enabled = true;
         }
-        
-        
+        t = GetComponent<Transform>();
+        t.position = rightHand.transform.position;
+
+
+
     }
 
     protected override void Update()

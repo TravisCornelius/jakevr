@@ -12,7 +12,7 @@ public class HandController : MonoBehaviour
      void Update () {
         
         animator.SetBool("isGrabbing", controllerEvents.triggerTouched);
-       
+        
     }
 
     
@@ -20,8 +20,8 @@ public class HandController : MonoBehaviour
     {
         controllerEvents = GetComponentInParent<VRTK_ControllerEvents>();
         animator = GetComponent<Animator>();
-
     }
 
-  
+    
+
 }
