@@ -12,7 +12,7 @@ public class ControlReactor : MonoBehaviour
 
     private void HandleChange(float value, float normalizedValue)
     {
-        Debug.Log(normalizedValue);
+
         if (normalizedValue > 70)
         {
             SceneController.lightsOn = true;
