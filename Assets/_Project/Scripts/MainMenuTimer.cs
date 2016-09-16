@@ -9,7 +9,7 @@ public class MainMenuTimer : MonoBehaviour
 
     //TextMesh mesh;
     public bool startTimer = true;
-    public int timeLimit = 120;
+    public float timeLimit = 120;
 
     private static float timer;
     private static float timeLeft;
@@ -19,23 +19,23 @@ public class MainMenuTimer : MonoBehaviour
     public GameObject watch;
     private TextMesh watchMesh;
 
-    AudioSource[] sources;
-    AudioSource lastSource;
+    AudioSource source;
 
     public AudioClip welcome;
+    private bool welcomeTrigger = true;
     public AudioClip chooseExperience;
+    private bool chooseExperienceTrigger = true;
 
     // Use this for initialization
     void Start()
     {
         //mesh = GetComponent<TextMesh>();
-        canvas = GameObject.Find("Canvas");
-        playground = GameObject.Find("Playground");
+        //canvas = GameObject.Find("Canvas");
+        //playground = GameObject.Find("Playground");
         //watch = GameObject.Find("WatchTime");
         watchMesh = watch.GetComponent<TextMesh>();
 
-        sources = GetComponents<AudioSource>();
-        lastSource = sources[sources.Length - 1];
+        source = GetComponent<AudioSource>();
 
     }
 
@@ -63,21 +63,23 @@ public class MainMenuTimer : MonoBehaviour
                     watchMesh.text = string.Format("{0:0}:{1:00}:{2:000}", minutes, seconds, milliseconds);
                 }
 
-                if (timeLeft > 30)
+                if (welcomeTrigger)
                 {
-                    canvas.SetActive(false);
-                    playground.SetActive(true);
+                    //canvas.SetActive(false);
+                    //playground.SetActive(true);
 
-                    lastSource.clip = welcome;
-                    lastSource.Play();
+                    source.clip = welcome;
+                    source.Play();
+                    welcomeTrigger = false;
                 }
-                else
+                else if ( timeLeft < 30 && chooseExperienceTrigger)
                 {
-                    canvas.SetActive(true);
-                    playground.SetActive(false);
+                    
+                        source.clip = chooseExperience;
+                        source.Play();
+                        chooseExperienceTrigger = false;
+                    
 
-                    lastSource.clip = chooseExperience;
-                    lastSource.Play();
                 }
 
             }
@@ -90,6 +92,7 @@ public class MainMenuTimer : MonoBehaviour
         }
 
     }
+
 
     public void PauseTimer(bool pause)
     {
