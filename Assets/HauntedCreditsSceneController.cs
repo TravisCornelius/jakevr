@@ -11,8 +11,6 @@ public class HauntedCreditsSceneController : MonoBehaviour {
 
     IEnumerator LerpThat(float speed, GameObject obj)
     {
-        
-        Debug.Log("i: " + i);
         float ratio = 0;
         while (ratio < 1)
         {
@@ -36,8 +34,7 @@ public class HauntedCreditsSceneController : MonoBehaviour {
         if (i >= 0)
         {
             StartCoroutine(LerpThat(.2f, credits[i]));
-        }
-       
+        }   
     }
 
     // Use this for initialization
@@ -54,6 +51,5 @@ public class HauntedCreditsSceneController : MonoBehaviour {
         }
         i = totalCredits-1;
         StartCoroutine(LerpThat(.2f,credits[i]));
-	}
-	
+	}	
 }
