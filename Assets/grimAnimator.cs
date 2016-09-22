@@ -11,6 +11,7 @@ public class grimAnimator : MonoBehaviour {
     Animator anim;
     Vector3 close;
     private bool animationTrigger = true;
+    public static bool stopped = false;
 
     // Use this for initialization
     void Start()
@@ -37,6 +38,7 @@ public class grimAnimator : MonoBehaviour {
 
         if ((close - transform.position).magnitude < .5f && animationTrigger)
         {
+            stopped = true;
             anim.CrossFade("Scream", .5f);
             nextToDoor = true;
             animationTrigger = false;
