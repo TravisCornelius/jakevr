@@ -21,7 +21,7 @@ public class girlAnimator : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (ControlReactor_Code.sliderSuccess && CameraRayCast.triggerAnimation)
+        if (ControlReactor_Code.sliderSuccess /*&& CameraRayCast.triggerAnimation*/)
         {
             hasBeenTriggered = true;
         }
